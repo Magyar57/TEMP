@@ -1,0 +1,9 @@
+# Compilation results
+build/
+
+# Extracted files
+Compilers/**
+!Compilers/watcom.zip
+
+# IDE
+.vscode
