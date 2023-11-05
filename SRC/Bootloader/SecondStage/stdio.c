@@ -114,13 +114,15 @@ void _cdecl printf(const char* formatted_string, ...){
 	// we know that the stack must be aligned to the size of the "int" datatype. So we can use an int pointer
 	int* argp = (int*) &formatted_string;
 
+	argp++;
+
 	int state = PRINTF_STATE_NORMAL;
 	int length = PRINTF_LENGTH_DEFAULT;
 
 	int radix = 10;
 	bool isSigned = false;
 
-	argp++;
+	// argp++;
 
 	while(*formatted_string){
 		
